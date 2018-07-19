@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
     private var mRealm: Realm = Realm.getDefaultInstance()
 
-    private fun getDbRepo(): List<Repo> = mRealm.copyFromRealm(mRealm.where(Repo::class.java).findAll())
+    private fun getDbRepo(): List<Repo> = mRealm.where(Repo::class.java).findAll()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
